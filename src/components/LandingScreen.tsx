@@ -50,7 +50,7 @@ export default function LandingScreen({ onComplete }: Props) {
       </motion.div>
 
       {/* Main content */}
-      <div className="relative z-10 text-center w-full max-w-[90vw] sm:max-w-[85vw] md:max-w-3xl mx-auto px-4">
+      <div className="relative z-10 text-center w-full max-w-lg md:max-w-3xl mx-auto px-5">
         {/* Happy Birthday */}
         <div
           className="flex justify-center flex-wrap gap-x-1 gap-y-0 sm:gap-x-2 md:gap-1 mb-3 sm:mb-4 md:mb-6"

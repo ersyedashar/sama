@@ -15,7 +15,7 @@ const reasons = [
 export default function ReasonsCards() {
   return (
     <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 bg-[#050510]" id="reasons">
-      <div className="max-w-5xl mx-auto px-5 sm:px-6">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 md:px-8">
         <motion.p
           className="text-center text-xs sm:text-sm text-white/30 uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-3 sm:mb-4"
           initial={{ opacity: 0 }}

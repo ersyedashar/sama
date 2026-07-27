@@ -17,7 +17,7 @@ export default function GiftSection() {
       className="relative py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-[#050510] via-[#0a0520] to-[#050510] flex items-center justify-center"
       id="gift"
     >
-      <div className="max-w-4xl mx-auto px-5 sm:px-6 text-center w-full">
+      <div className="max-w-4xl mx-auto px-5 sm:px-6 md:px-8 text-center w-full">
         <motion.p
           className="text-xs sm:text-sm text-white/30 uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-3 sm:mb-4"
           initial={{ opacity: 0 }}

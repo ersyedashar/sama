@@ -28,7 +28,7 @@ export default function Countdown() {
 
   return (
     <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden" id="countdown">
-      <div className="max-w-5xl mx-auto px-5 sm:px-6 text-center">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 md:px-8 text-center">
         <motion.p
           className="text-base sm:text-lg md:text-xl text-white/40 tracking-[0.15em] sm:tracking-[0.2em] uppercase mb-3 sm:mb-4"
           initial={{ opacity: 0 }}
@@ -120,7 +120,7 @@ function CelebrationMode() {
   return (
     <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden" id="countdown">
       <ConfettiEffect />
-      <div className="max-w-4xl mx-auto px-5 sm:px-6 text-center relative z-10">
+      <div className="max-w-4xl mx-auto px-5 sm:px-6 md:px-8 text-center relative z-10">
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}

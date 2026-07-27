@@ -37,7 +37,7 @@ export default function FloatingWishes() {
       className="relative py-16 sm:py-20 md:py-24 lg:py-32 min-h-[50vh] sm:min-h-[60vh] bg-gradient-to-b from-[#050510] via-[#0a0520] to-[#050510] overflow-hidden"
       id="wishes"
     >
-      <div className="max-w-5xl mx-auto px-5 sm:px-6 relative z-10">
+      <div className="max-w-5xl mx-auto px-5 sm:px-6 md:px-8 relative z-10">
         <motion.p
           className="text-center text-xs sm:text-sm text-white/30 uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-3 sm:mb-4"
           initial={{ opacity: 0 }}
@@ -58,7 +58,7 @@ export default function FloatingWishes() {
       </div>
 
       <div
-        className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] px-2"
+        className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] px-5 sm:px-6"
         aria-label="Floating birthday wishes"
       >
         {wishes.map((wish, i) => (

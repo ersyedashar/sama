@@ -8,7 +8,7 @@ export default function LetterSection() {
       className="relative py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-[#050510] via-[#0a0520] to-[#050510] overflow-hidden"
       id="letter"
     >
-      <div className="max-w-3xl mx-auto px-3 sm:px-6 md:px-8">
+      <div className="max-w-3xl mx-auto px-5 sm:px-6 md:px-8">
         <motion.p
           className="text-center text-xs sm:text-sm text-white/30 uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-3 sm:mb-4"
           initial={{ opacity: 0 }}
@@ -28,7 +28,7 @@ export default function LetterSection() {
         </motion.h2>
 
         <motion.div
-          className="glass-strong rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 relative overflow-hidden break-words"
+          className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 relative overflow-hidden break-words bg-white/[0.06] backdrop-blur-xl border border-white/[0.08] shadow-[0_8px_32px_rgba(180,142,255,0.12),inset_0_1px_0_rgba(255,255,255,0.06)]"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
