@@ -72,7 +72,7 @@ function StorySection({
   return (
     <section
       ref={ref}
-      className={`relative min-h-[80vh] sm:min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b ${story.gradient}`}
+      className={`relative min-h-[80vh] sm:min-h-svh flex items-center justify-center overflow-hidden bg-gradient-to-b ${story.gradient}`}
       id={`story-${index}`}
     >
       <FloatingParticles color={story.accentColor} count={12} />

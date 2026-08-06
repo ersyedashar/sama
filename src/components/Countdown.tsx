@@ -49,7 +49,7 @@ export default function Countdown() {
         </motion.h2>
 
         <div
-          className="flex justify-center items-start gap-2 sm:gap-3 md:gap-6"
+          className="flex justify-center items-start gap-1 sm:gap-3 md:gap-6"
           role="timer"
           aria-label="Birthday countdown"
         >
@@ -77,7 +77,7 @@ function CountdownCard({
 }) {
   return (
     <motion.div
-      className="glass-strong rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8 min-w-[60px] sm:min-w-[72px] md:min-w-[90px] lg:min-w-[120px] flex-1 max-w-[90px] sm:max-w-[110px] md:max-w-none"
+      className="glass-strong rounded-xl sm:rounded-2xl md:rounded-3xl p-2 sm:p-4 md:p-6 lg:p-8 min-w-[55px] sm:min-w-[72px] md:min-w-[90px] lg:min-w-[120px] flex-1 max-w-[72px] sm:max-w-[110px] md:max-w-none"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -86,7 +86,7 @@ function CountdownCard({
       <AnimatePresence mode="popLayout">
         <motion.span
           key={value}
-          className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white tabular-nums"
+          className="block text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white tabular-nums"
           initial={{ y: 10, opacity: 0, filter: "blur(4px)" }}
           animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
           exit={{ y: -10, opacity: 0, filter: "blur(4px)" }}
@@ -105,7 +105,7 @@ function CountdownCard({
 function Separator({ index }: { index: number }) {
   return (
     <motion.div
-      className="flex items-center text-white/20 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light self-start mt-3 sm:mt-4 md:mt-6 lg:mt-8 px-0.5 sm:px-1"
+      className="flex items-center text-white/20 text-lg sm:text-2xl md:text-3xl lg:text-4xl font-light self-start mt-2 sm:mt-4 md:mt-6 lg:mt-8 px-0 sm:px-1"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}

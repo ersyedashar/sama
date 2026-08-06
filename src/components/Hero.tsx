@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-svh flex items-center justify-center overflow-hidden"
       id="hero"
     >
       <motion.div className="absolute inset-0" style={{ y, scale }}>

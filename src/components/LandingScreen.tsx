@@ -33,7 +33,7 @@ export default function LandingScreen({ onComplete }: Props) {
 
       {/* Moon */}
       <motion.div
-        className="absolute top-[10%] right-[10%] sm:top-[15%] sm:right-[20%] md:right-[25%]"
+        className="absolute top-[5%] right-[5%] sm:top-[15%] sm:right-[20%] md:right-[25%]"
         initial={{ opacity: 0, scale: 0.5, y: 50 }}
         animate={{
           opacity: phase >= 1 ? 0.9 : 0,
@@ -43,14 +43,14 @@ export default function LandingScreen({ onComplete }: Props) {
         transition={{ duration: 2, ease: "easeOut" }}
       >
         <div className="relative">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-amber-100 via-yellow-100 to-orange-50 shadow-[0_0_60px_rgba(255,220,130,0.4),0_0_120px_rgba(255,200,80,0.2)]" />
-          <div className="absolute top-1 left-2 sm:top-2 sm:left-4 w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 rounded-full bg-orange-200/30 blur-sm" />
-          <div className="absolute bottom-3 right-2 sm:bottom-6 sm:right-3 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 rounded-full bg-orange-200/20 blur-sm" />
+          <div className="w-12 h-12 sm:w-20 sm:h-20 md:w-32 md:h-32 rounded-full bg-gradient-to-br from-amber-100 via-yellow-100 to-orange-50 shadow-[0_0_60px_rgba(255,220,130,0.4),0_0_120px_rgba(255,200,80,0.2)]" />
+          <div className="absolute top-0.5 left-1 sm:top-2 sm:left-4 w-3 h-3 sm:w-6 sm:h-6 md:w-8 md:h-8 rounded-full bg-orange-200/30 blur-sm" />
+          <div className="absolute bottom-2 right-1 sm:bottom-6 sm:right-3 w-2 h-2 sm:w-4 sm:h-4 md:w-5 md:h-5 rounded-full bg-orange-200/20 blur-sm" />
         </div>
       </motion.div>
 
       {/* Main content */}
-      <div className="relative z-10 text-center w-full max-w-lg md:max-w-3xl mx-auto px-5">
+      <div className="relative z-10 text-center w-full max-w-lg md:max-w-3xl mx-auto px-4 sm:px-5">
         {/* Happy Birthday */}
         <div
           className="flex justify-center flex-wrap gap-x-1 gap-y-0 sm:gap-x-2 md:gap-1 mb-3 sm:mb-4 md:mb-6"
@@ -61,7 +61,7 @@ export default function LandingScreen({ onComplete }: Props) {
               {word.split("").map((letter, li) => (
                 <motion.span
                   key={`${wi}-${li}`}
-                  className="text-[1.75rem] sm:text-4xl md:text-6xl lg:text-7xl font-light tracking-wider text-white/90"
+                  className="text-[1.5rem] sm:text-4xl md:text-6xl lg:text-7xl font-light tracking-wider text-white/90"
                   initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                   animate={{
                     opacity: phase >= 2 ? 1 : 0,
@@ -78,7 +78,7 @@ export default function LandingScreen({ onComplete }: Props) {
                 </motion.span>
               ))}
               {wi < titleWords.length - 1 && (
-                <span className="w-2 sm:w-3 md:w-4" />
+                <span className="w-1.5 sm:w-3 md:w-4" />
               )}
             </span>
           ))}
@@ -92,7 +92,7 @@ export default function LandingScreen({ onComplete }: Props) {
           {"Sama".split("").map((letter, i) => (
             <motion.span
               key={`name-${i}`}
-              className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-semibold bg-gradient-to-r from-[#b48eff] via-[#ffb8d0] to-[#b48eff] bg-clip-text text-transparent"
+              className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-semibold bg-gradient-to-r from-[#b48eff] via-[#ffb8d0] to-[#b48eff] bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 40, scale: 0.8 }}
               animate={{
                 opacity: phase >= 3 ? 1 : 0,

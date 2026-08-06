@@ -6,7 +6,6 @@ import LandingScreen from "@/components/LandingScreen";
 import Hero from "@/components/Hero";
 import Countdown from "@/components/Countdown";
 import StorySections from "@/components/StorySections";
-import MemoryGallery from "@/components/MemoryGallery";
 import GiftSection from "@/components/GiftSection";
 import ReasonsCards from "@/components/ReasonsCards";
 import FloatingWishes from "@/components/FloatingWishes";
@@ -51,7 +50,6 @@ export default function Home() {
             <Hero />
             <Countdown />
             <StorySections />
-            <MemoryGallery />
             <GiftSection />
             <ReasonsCards />
             <FloatingWishes />

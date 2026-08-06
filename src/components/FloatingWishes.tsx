@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const wishes = [
   "May your birthday be filled with all the love your heart can hold 🌸",
@@ -16,21 +16,47 @@ const wishes = [
   "Your friendship is the greatest gift of all 💝",
 ];
 
-const bubblePositions = [
-  { x: 5, y: 5 },
-  { x: 50, y: 0 },
-  { x: 25, y: 20 },
-  { x: 65, y: 15 },
-  { x: 8, y: 40 },
-  { x: 45, y: 35 },
-  { x: 72, y: 30 },
-  { x: 20, y: 55 },
-  { x: 55, y: 55 },
-  { x: 35, y: 75 },
-];
+function getBubblePositions(isSmall: boolean) {
+  if (isSmall) {
+    return [
+      { x: 2, y: 3 },
+      { x: 35, y: 1 },
+      { x: 65, y: 5 },
+      { x: 12, y: 22 },
+      { x: 50, y: 20 },
+      { x: 78, y: 18 },
+      { x: 5, y: 42 },
+      { x: 38, y: 38 },
+      { x: 65, y: 40 },
+      { x: 25, y: 58 },
+    ];
+  }
+  return [
+    { x: 5, y: 5 },
+    { x: 45, y: 0 },
+    { x: 25, y: 20 },
+    { x: 62, y: 15 },
+    { x: 8, y: 40 },
+    { x: 45, y: 35 },
+    { x: 72, y: 30 },
+    { x: 20, y: 55 },
+    { x: 55, y: 55 },
+    { x: 35, y: 75 },
+  ];
+}
 
 export default function FloatingWishes() {
   const [expanded, setExpanded] = useState<number | null>(null);
+  const [isSmall, setIsSmall] = useState(true);
+
+  useEffect(() => {
+    const check = () => setIsSmall(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  const positions = getBubblePositions(isSmall);
 
   return (
     <section
@@ -58,7 +84,7 @@ export default function FloatingWishes() {
       </div>
 
       <div
-        className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] px-5 sm:px-6"
+        className="relative w-full h-[400px] sm:h-[400px] md:h-[500px] px-5 sm:px-6"
         aria-label="Floating birthday wishes"
       >
         {wishes.map((wish, i) => (
@@ -68,7 +94,7 @@ export default function FloatingWishes() {
             index={i}
             isExpanded={expanded === i}
             onToggle={() => setExpanded(expanded === i ? null : i)}
-            pos={bubblePositions[i]}
+            pos={positions[i]}
           />
         ))}
       </div>
@@ -84,7 +110,7 @@ export default function FloatingWishes() {
           >
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
             <motion.div
-              className="relative glass-strong rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 max-w-md w-full text-center"
+              className="relative glass-strong rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 max-w-[85vw] sm:max-w-md w-full text-center"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -128,7 +154,7 @@ function WishBubble({
       style={{
         left: `${pos.x}%`,
         top: `${pos.y}%`,
-        maxWidth: "clamp(140px, 30vw, 200px)",
+        maxWidth: "clamp(110px, 35vw, 200px)",
       }}
       initial={{ opacity: 0, scale: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
