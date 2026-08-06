@@ -3,13 +3,8 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import LandingScreen from "@/components/LandingScreen";
-import Hero from "@/components/Hero";
-import Countdown from "@/components/Countdown";
 import StorySections from "@/components/StorySections";
 import GiftSection from "@/components/GiftSection";
-import ReasonsCards from "@/components/ReasonsCards";
-import FloatingWishes from "@/components/FloatingWishes";
-import LetterSection from "@/components/LetterSection";
 import Footer from "@/components/Footer";
 import MusicControl from "@/components/MusicControl";
 import ScrollProgress from "@/components/ScrollProgress";
@@ -47,13 +42,8 @@ export default function Home() {
           <MusicControl />
 
           <main className="w-full">
-            <Hero />
-            <Countdown />
             <StorySections />
             <GiftSection />
-            <ReasonsCards />
-            <FloatingWishes />
-            <LetterSection />
           </main>
 
           <Footer />

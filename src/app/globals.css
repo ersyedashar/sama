@@ -29,12 +29,28 @@
 }
 
 html {
-  scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: rgba(180, 142, 255, 0.3) transparent;
   overflow-x: clip;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: none;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 html::-webkit-scrollbar {
